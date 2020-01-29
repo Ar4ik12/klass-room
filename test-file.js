@@ -1,11 +1,10 @@
-const greet = function (guest) {
-    return `${guest}, welcome to ${this.name}!`;
+"use strict";
+const shape = {
+  radius: 10,
+  diameter() {
+    return this.radius * 2;
+  },
+  perimeter: () => 2 * 3.14 * this.radius
 };
-
-const hotel = {
-    name: 'Resort Hotel'
-};
-
-const hotelGreeter = greet.bind(hotel, 'Mango');
-
-hotelGreeter(); // "Mango, wellcome to Resort Hotel!"
+console.log(shape.diameter());
+console.log(shape.perimeter());
